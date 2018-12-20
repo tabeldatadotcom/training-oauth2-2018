@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+  db-psql:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_PASSWORD=security
+      - POSTGRES_USER=security
+      - POSTGRES_DB=security
+    ports:
+      - "5431:5432"
+    volumes:
+      - datadir:/var/lib/postgresql/data
+volumes:
+  datadir:
